@@ -13,16 +13,32 @@ import java.util.Map;
  */
 public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFactory implements BeanDefinitionRegistry {
 
+    // 类信息容器
     private Map<String, BeanDefinition> beanDefinitionMap = new HashMap<>();
 
+    /**
+     * 注册bean
+     * @author lichuang3
+     * @date 2021/9/27 2021/9/27
+     * @param beanName
+     * @param beanDefinition
+     */
     @Override
     public void registerBeanDefinition(String beanName, BeanDefinition beanDefinition) {
         beanDefinitionMap.put(beanName, beanDefinition);
     }
 
+    /**
+     * 获取bean的类注册信息
+     * @author lichuang3
+     * @date 2021/9/27 2021/9/27
+     * @param beanName
+     * @return cn.bugstack.springframework.beans.factory.config.BeanDefinition
+     */
     @Override
     public BeanDefinition getBeanDefinition(String beanName) throws BeansException {
         BeanDefinition beanDefinition = beanDefinitionMap.get(beanName);
+        // 该bean不存在
         if (beanDefinition == null) throw new BeansException("No bean named '" + beanName + "' is defined");
         return beanDefinition;
     }

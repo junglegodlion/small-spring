@@ -9,6 +9,13 @@ import cn.bugstack.springframework.beans.BeansException;
  */
 public interface BeanFactory {
 
+    /**
+     * 提供 Bean 的获取方法
+     * @author lichuang3
+     * @date 2021/9/27 2021/9/27
+     * @param name
+     * @return java.lang.Object
+     */
     Object getBean(String name) throws BeansException;
 
 }

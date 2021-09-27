@@ -9,6 +9,13 @@ package cn.bugstack.springframework.beans.factory.config;
  */
 public interface SingletonBeanRegistry {
 
+    /**
+     * 根据beanName获取单例对象
+     * @author lichuang3
+     * @date 2021/9/27 2021/9/27
+     * @param beanName
+     * @return java.lang.Object
+     */
     Object getSingleton(String beanName);
 
 }
