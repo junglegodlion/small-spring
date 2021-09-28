@@ -11,4 +11,19 @@ public class UserService {
         System.out.println("查询用户信息");
     }
 
+    /**
+     * 如果我们去实例化一个含有构造函数的对象那么就要抛异常了。
+     * 发生这一现象的主要原因就是因为 beanDefinition.getBeanClass().newInstance();
+     * 实例化方式并没有考虑构造函数的入参，所以就这个坑就在这等着你了
+     * @author lichuang3
+     * @date 2021/9/28 2021/9/28
+     * @param null 
+     * @return null
+     */
+//    private String name;
+//
+//    public UserService(String name) {
+//        this.name = name;
+//    }
+
 }

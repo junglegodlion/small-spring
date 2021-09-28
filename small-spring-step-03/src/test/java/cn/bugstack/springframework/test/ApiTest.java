@@ -52,6 +52,13 @@ public class ApiTest {
         System.out.println(userService);
     }
 
+    /**
+     * 从最简单的操作来看，如果有构造函数的类需要实例化时，
+     * 则需要使用 getDeclaredConstructor 获取构造函数，
+     * 之后在通过传递参数进行实例化。
+     * @author lichuang3
+     * @date 2021/9/28 2021/9/28
+     */
     @Test
     public void test_constructor() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<UserService> userServiceClass = UserService.class;
