@@ -4,6 +4,7 @@ import cn.bugstack.springframework.beans.factory.BeanFactory;
 import cn.bugstack.springframework.beans.factory.config.BeanDefinition;
 import cn.bugstack.springframework.beans.factory.support.DefaultListableBeanFactory;
 import cn.bugstack.springframework.test.bean.UserService;
+import com.sun.org.apache.xpath.internal.SourceTree;
 import org.junit.Test;
 
 
@@ -30,6 +31,11 @@ public class ApiTest {
         // 4.第二次获取 bean from Singleton
         UserService userService_singleton = (UserService) beanFactory.getBean("userService");
         userService_singleton.queryUserInfo();
+
+        System.out.println(userService);
+        System.out.println(userService_singleton);
+
+        System.out.println(userService==userService_singleton?"是单例":"不是单例");
     }
 
 }
