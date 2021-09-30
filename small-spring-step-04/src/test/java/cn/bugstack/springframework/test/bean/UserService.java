@@ -9,6 +9,7 @@ public class UserService {
 
     private String uId;
 
+    // Dao、Service，是我们平常开发经常使用的场景。在 UserService 中注入 UserDao，这样就能体现出Bean属性的依赖了。
     private UserDao userDao;
 
     public void queryUserInfo() {

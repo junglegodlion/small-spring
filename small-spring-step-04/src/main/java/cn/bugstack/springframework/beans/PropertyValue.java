@@ -5,7 +5,7 @@ package cn.bugstack.springframework.beans;
  * 公众号：bugstack虫洞栈
  * Create by 小傅哥(fustack)
  *
- * bean 属性信息
+ * bean 属性信息(属性值)
  */
 public class PropertyValue {
 
